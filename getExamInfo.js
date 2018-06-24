@@ -14,7 +14,7 @@ module.exports = async function (stuid) {
         data: `keyword=${stuid}&ok=%B2%E9%D5%D2`,
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         responseType: 'arraybuffer',
-        transformResponse: gbkTransform,
+        transformResponse: gbkTransform
     };
 
     let result;

@@ -102,9 +102,8 @@ async function wait(time) {
         }, time);
     })
 }
-function dodo() {
+function getGrade(grade) {
     return new Promise(async (resolve, reject) => {
-        const grade = ['16'];
         //连续失败次数
         let failed = 0;
         const xueyuan = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24'];
@@ -153,16 +152,18 @@ function dodo() {
                     if (res === -1) {
                         j--;
                     }
-                    if (failed >= 100) {
+                    if (failed >= 500) {
                         break;
                     }
                 }
             }
         }
+        resolve(`${grades}完成`)
     })
 }
 
-dodo();
-
+Promise.all([getGrade(['14']), getGrade(['15']), getGrade(['16']), getGrade(['17'])]).then((values) => {
+    console.log(values)
+})
 
 
