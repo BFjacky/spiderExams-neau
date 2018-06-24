@@ -1,0 +1,26 @@
+{
+  "name": "spider-exam",
+  "version": "1.0.0",
+  "description": "爬虫neau考场信息的代码，用于学习交流~",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BFjacky/spiderExams-neau.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BFjacky/spiderExams-neau/issues"
+  },
+  "homepage": "https://github.com/BFjacky/spiderExams-neau#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "iconv-lite": "^0.4.23",
+    "mongoose": "^5.1.6"
+  }
+}
