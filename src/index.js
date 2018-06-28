@@ -129,7 +129,7 @@ function getGrade(grade) {
                     const smartNumber = parseInt(stuId[1] + stuId[2] + stuId[5] + stuId[6] + stuId[7] + stuId[8]);
 
                     if (maxSmartNumber > smartNumber) {
-                        console.log(`${stuId}已经获取过了`);
+                        console.log(`${stuId}考场信息已在数据库中`);
                         continue;
                     }
                     let res;
@@ -137,11 +137,11 @@ function getGrade(grade) {
                         res = await getAndSave(stuId)
                     } catch (err) {
                         j--;
-                        console.log(`${stuId}出错了`);
+                        console.log(`${stuId}获取出错`);
                         await wait(5000);
                         continue;
                     }
-                    console.log(stuId + " : " + res + ", failed : " + failed);
+                    console.log(stuId + " : " + `已获取${res}场考试` + `, ${grade}年级${xueyuan[i]}学院 连续没有获得考试信息的人数 : ` + failed);
                     if (res === 0) {
                         failed++;
                     } else if (res === -1) {
