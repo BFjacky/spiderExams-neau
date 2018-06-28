@@ -17,17 +17,18 @@
   + Node.js v8.9.4
   + MongoDB 数据库已启动，运行端口27017
 
-## 安装 / 开始开发
+## 安装
 
 ```bash
   # 安装依赖
   $ npm install
-
-  # 启动开发模式
-  $ npm run dev
 ```
 
-> &#x26A0; Tips：应用将会运行在 [http://localhost:7001/](http://localhost:7001/)
+## 运行
+
+```bash
+ node ./src/index.js
+```
 
 ##目录结构
 
@@ -38,12 +39,6 @@
   ├── src     # 源码
   ├── .gitignore  # git 忽略列表
   └── README.md   # 本说明文件
-```
-
-## 运行
-
-```bash
- node ./src/index.js
 ```
 
 ## 设计思路
