@@ -11,12 +11,25 @@
 
 > &#x26A0; Tips：请大家善意测试，最好是在夜深人静的时候....避免占用教务处服务器大量资源影响教务性能
 
-## 克隆/开发
+
+## 要求
+
+  + Node.js v8.9.4
+  + MongoDB 数据库已启动，运行端口27017
+
+## 安装 / 开始开发
 
 ```bash
-  # 克隆代码
-  $ git clone https://github.com/BFjacky/spiderExams-neau.git
+  # 安装依赖
+  $ npm install
+
+  # 启动开发模式
+  $ npm run dev
 ```
+
+> &#x26A0; Tips：应用将会运行在 [http://localhost:7001/](http://localhost:7001/)
+
+##目录结构
 
 ```bash
   # 目录结构
@@ -26,6 +39,19 @@
   ├── .gitignore  # git 忽略列表
   └── README.md   # 本说明文件
 ```
+
+## 运行
+
+```bash
+ node ./src/index.js
+```
+
+## 设计思路
+
+使用axios.request进行请求，使用cheerio进行解析。
+
+主要内容在index.js中，根据注释阅读代码即可，开发中注意处理爬虫的错误信息，否则会导致程序崩溃，这样的话第二天早上醒来你会发现控制台的命令是红色的...
+
 
 
 
